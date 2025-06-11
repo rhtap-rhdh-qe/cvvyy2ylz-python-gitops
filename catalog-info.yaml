@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cvvyy2ylz-python-gitops
+  description: This is GitOps manifest for cvvyy2ylz-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=cvvyy2ylz-python
+    backstage.io/kubernetes-id: cvvyy2ylz-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: cvvyy2ylz-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:cvvyy2ylz-python
